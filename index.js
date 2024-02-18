@@ -59,7 +59,8 @@ app.get('/metrics', (request, reply) => {
 });
 
 // Start the server
-app.listen(3000, (err) => {
+app.listen({port:3000,host:'0.0.0.0'}, (err,addr) => {
+
   if (err) {
     console.error(err);
     process.exit(1);
